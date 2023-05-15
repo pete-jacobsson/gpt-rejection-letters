@@ -1,1 +1,4 @@
 # gpt-rejection-letters
+
+This project looks at the potential of using Generative AI to write automated job application rejection letters, that also provide some feedback for the receiver.
+
