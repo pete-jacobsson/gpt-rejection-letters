@@ -1,0 +1,5 @@
+"0","  token = t.readlines()
+
+"
+"2","IsADirectoryError: [Errno 21] Is a directory: '/home/pete/Documents'
+"
