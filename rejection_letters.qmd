@@ -5,22 +5,39 @@ format: html
 jupyter: python3
 ---
 
-This project is about using GPT to write meaningful job rejection letters. The idea for the project came from an automated response from an application I did some time ago. The message was nice, and it was nice to receive something - but the thing that struck me was that they apologized for the reply being impersonal. So I thought - **Hey, it should be possible to not only personalize, but also build feedback into the reply**
+This project is about using GPT to write meaningful job rejection letters. The idea for the project came from an automated response from an application I did some time ago. The message was nice, and it was nice to receive something - but the thing that struck me was that they apologized for the reply being impersonal. So I thought - **Hey, it should be possible to not only personalize, but also build feedback into the reply**. With a connection to GPT the ATS might start working for both sides.
 
 
-## Running Code
+## Set up
 
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+I set up the GPT connection via the API using  the get_completion function, as discussed by Isa Fulford and Andrew NG in their deeplearning.ai course.
 
 ```{python}
-1 + 1
+import openai
+import os
+
+with open('/home/pete/Documents/gpt_key.txt') as t:
+  openai.api_key = t.readlines()
+
+
+def get_completion(prompt, model="gpt-3.5-turbo"):
+    messages = [{"role": "user", "content": prompt}]
+    response = openai.ChatCompletion.create(
+        model=model,
+        messages=messages,
+        temperature=0, # this is the degree of randomness of the model's output
+    )
+    return response.choices[0].message["content"]
+
 ```
 
-You can add options to executable code like this 
+Lets test if the function works
 
 ```{python}
-#| echo: false
-2 * 2
+prompt = f"""Are there any hurricanes in Hampshire today?"""
+
+response = get_completion(prompt)
+print(response)
 ```
 
 The `echo: false` option disables the printing of code (only output is displayed).

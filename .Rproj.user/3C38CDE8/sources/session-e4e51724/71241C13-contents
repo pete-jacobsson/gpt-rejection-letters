@@ -10,23 +10,35 @@ This project is about using GPT to write meaningful job rejection letters. The i
 
 ## Set up
 
-I set up the GPT connection via the API, as discussed by Isa Fulford and Andrew NG in their deeplearning.ai course.
+I set up the GPT connection via the API using  the get_completion function, as discussed by Isa Fulford and Andrew NG in their deeplearning.ai course.
 
 ```{python}
 import openai
 import os
 
 with open('/home/pete/Documents/gpt_key.txt') as t:
-  token = t.readlines()
+  openai.api_key = t.readlines()
 
+
+def get_completion(prompt, model="gpt-3.5-turbo"):
+    messages = [{"role": "user", "content": prompt}]
+    response = openai.ChatCompletion.create(
+        model=model,
+        messages=messages,
+        temperature=0, # this is the degree of randomness of the model's output
+    )
+    return response.choices[0].message["content"]
 
 ```
 
-You can add options to executable code like this 
+Lets test if the function works
 
 ```{python}
-#| echo: false
-2 * 2
+prompt = f"""Are there any hurricanes in Hampshire today?"""
+
+response = get_completion(prompt)
+print(response)
+print('potato')
 ```
 
 The `echo: false` option disables the printing of code (only output is displayed).
