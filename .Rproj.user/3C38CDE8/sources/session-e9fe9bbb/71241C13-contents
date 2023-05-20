@@ -16,9 +16,13 @@ I set up the GPT connection via the API using  the get_completion function, as d
 import openai
 import os
 
+##COMMENT UP THIS CODE!!!
 with open('/home/pete/Documents/gpt_key.txt') as t:
-  openai.api_key = t.readlines()
+  api_key = t.readlines()
 
+api_key = api_key[0].strip("\n")
+
+openai.api_key = api_key
 
 def get_completion(prompt, model="gpt-3.5-turbo"):
     messages = [{"role": "user", "content": prompt}]
