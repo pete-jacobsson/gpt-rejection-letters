@@ -1,5 +1,5 @@
-"0","print(response)
+"0","response = get_completion(prompt)
 "
-"1","As an AI language model, I do not have access to real-time weather information. However, Hampshire is not located in an area that is typically affected by hurricanes. The United Kingdom is more likely to experience storms and heavy rainfall, but it is always important to check local weather forecasts for the most up-to-date information.
+"2","AuthenticationError: Incorrect API key provided: sk-dz6v8***************************************2usc. You can find your API key at https://platform.openai.com/account/api-keys.
 "
 "0",""
