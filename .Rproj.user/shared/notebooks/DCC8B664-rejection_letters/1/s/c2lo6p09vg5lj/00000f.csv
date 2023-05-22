@@ -1,0 +1,48 @@
+"0","prompt_cv = f""""""Can you please generate a CV for one John Doe. John holds a Masters in economics from an Ivy League University. Since graduation he worked three years as a data anlyst within the retail sector. The CV is not to include any evidence of knowledge of logistics, does not include the word 'Excel', and has no mention of programming languages. The CV indicates that John is a Scrum master, but does not include terms 'agile' or 'project management'. Please fill in remaining details as you see fit. Please keep the CV to two pages A2. John is applying for a logistics data analyst post"""""""
+"0",""
+"0","cv_text = get_completion(prompt_cv, temperature = 0.5) #Added some variability to the responses."
+"0",""
+"0","print(cv_text)"
+"1","John Doe
+
+Contact Information:
+Address: 123 Main Street, Anytown, USA
+Phone: 555-555-5555
+Email: john.doe@email.com
+
+Objective:
+To secure a position as a logistics data analyst where I can utilize my analytical skills and experience in data analysis to contribute to the success of the organization.
+
+Education:
+Master of Arts in Economics, Ivy League University, 20XX
+Bachelor of Arts in Economics, State University, 20XX
+
+Professional Experience:
+
+Data Analyst, Retail Sector, 20XX-20XX
+• Conducted data analysis to identify trends, patterns, and insights in sales and customer behavior
+• Developed reports and dashboards to communicate findings to stakeholders
+• Collaborated with cross-functional teams to develop and implement data-driven strategies to improve business performance
+• Maintained and updated databases and data warehouses
+• Utilized statistical software to analyze data and create predictive models
+
+Scrum Master, Retail Sector, 20XX-20XX
+• Facilitated daily scrum meetings, sprint planning, and sprint reviews
+• Coached team members on agile practices and principles
+• Removed impediments to the team's progress and facilitated conflict resolution
+• Worked closely with product owners to ensure backlog prioritization and alignment with business objectives
+• Monitored and reported on team performance metrics
+
+Skills:
+• Data analysis and visualization
+• Statistical analysis and modeling
+• SQL and database management
+• Project management and agile methodologies
+• Microsoft Office Suite
+
+Certifications:
+• Scrum Master Certification, Scrum Alliance, 20XX
+
+References:
+Available upon request.
+"
