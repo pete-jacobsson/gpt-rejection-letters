@@ -1,9 +1,4 @@
-"0","prompt_cv = f""""""Can you please generate a CV for one John Doe. John holds a Masters in economics from an Ivy League University. Since graduation he worked three years as a data anlyst within the retail sector. The CV is not to include any evidence of knowledge of logistics, does not include the word 'Excel', and has no mention of programming languages. The CV indicates that John is a Scrum master, but does not include terms 'agile' or 'project management'. Please fill in remaining details as you see fit. Please keep the CV to two pages A2. John is applying for a logistics data analyst post"""""""
-"0",""
-"0","cv_text = get_completion(prompt_cv, temperature = 0.5) #Added some variability to the responses."
-"0",""
-"0","print(cv_text)"
-"1","JOHN DOE
+JOHN DOE
 123 Main Street | Anytown, USA 12345 | (123) 456-7890 | john.doe@email.com
 
 SUMMARY
@@ -38,4 +33,3 @@ Certified Scrum Master, Scrum Alliance
 
 REFERENCES
 Available upon request.
-"

@@ -37,7 +37,7 @@ Lets test if the function works
 ```{python}
 prompt_conn_test = f"""Are there any hurricanes in Hampshire today?"""
 
-response = get_completion(prompt)
+response = get_completion(prompt_conn_test)
 print(response)
 ```
 
@@ -68,8 +68,22 @@ cv_text = get_completion(prompt_cv, temperature = 0.5) #Added some variability t
 print(cv_text)
 ```
 
+```{python}
+##Lets save the job description and the CV. This will allow keeping the number of API calls down, and makes the protype reproducible.
+# with open('sample_job.txt', 'w') as sj:
+#   sj.write(job_description)
+# 
+# with open('sample_cv.txt', 'w') as cv:
+#   cv.write(cv_text)
 
 
+```
+
+
+
+## Use GPT to screen the sample CV
+
+At this stage we have a CV and a job description. In the target workflow we would run the CV through an ATS, and use that to get a list of mis-matches. However, as I don't have access to a real ATS, I will once again use a GPT prompt instead.
 
 
 

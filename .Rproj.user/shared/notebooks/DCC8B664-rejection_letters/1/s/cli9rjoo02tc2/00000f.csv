@@ -1,0 +1,13 @@
+"0","##Lets save the job description and the CV"
+"0","with open('sample_job.txt', 'w') as sj:"
+"0","  sj.write(job_description)"
+"0","  "
+"0","with open('sample_cv.txt', 'w') as cv:"
+"1","2095
+"
+"0","  cv.write(cv_text)"
+"0","  "
+"0","  "
+"0",""
+"1","1652
+"
