@@ -1,0 +1,27 @@
+"0","print(cv_match)
+"
+"1","Skills required in the job description:
+- Strong analytical skills and ability to work with large datasets
+- Proficiency in SQL and Excel
+- Experience with data visualization tools such as Tableau or Power BI
+- Familiarity with programming languages such as Python or R
+- Knowledge of logistics operations and supply chain management
+- Experience with project management methodologies such as Agile or Waterfall
+- Excellent communication and collaboration skills
+- Ability to work independently and as part of a team
+- Strong attention to detail and ability to prioritize tasks
+
+Matching skills in the CV:
+- Strong analytical skills and ability to work with large datasets (Yes)
+- Proficiency in SQL and Excel (Yes)
+- Experience with data visualization tools such as Tableau or Power BI (Yes)
+- Familiarity with programming languages such as Python or R (Yes)
+- Knowledge of logistics operations and supply chain management (Not mentioned in the CV)
+- Experience with project management methodologies such as Agile or Waterfall (Yes, specifically Scrum)
+- Excellent communication and collaboration skills (Yes)
+- Ability to work independently and as part of a team (Yes)
+- Strong attention to detail and ability to prioritize tasks (Not mentioned in the CV) 
+
+Overall, the CV matches most of the skills required in the job description. However, the CV does not mention any specific knowledge of logistics operations and supply chain management, and does not mention strong attention to detail and ability to prioritize tasks.
+"
+"0",""

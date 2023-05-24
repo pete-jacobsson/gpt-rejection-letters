@@ -1,16 +1,6 @@
 "0","prompt_conn_test = f""""""Are there any hurricanes in Hampshire today?"""""""
 "0",""
 "0","response = get_completion(prompt_conn_test)"
-"2","APIError: The server had an error while processing your request. Sorry about that! You can retry your request, or contact us through our help center at help.openai.com if the error persists. (Please include the request ID 8fa51537dc29f1e721ee83f9a2f96b05 in your message.) {
-  ""error"": {
-    ""message"": ""The server had an error while processing your request. Sorry about that! You can retry your request, or contact us through our help center at help.openai.com if the error persists. (Please include the request ID 8fa51537dc29f1e721ee83f9a2f96b05 in your message.)"",
-    ""type"": ""server_error"",
-    ""param"": null,
-    ""code"": null
-  }
-}
- 500 {'error': {'message': 'The server had an error while processing your request. Sorry about that! You can retry your request, or contact us through our help center at help.openai.com if the error persists. (Please include the request ID 8fa51537dc29f1e721ee83f9a2f96b05 in your message.)', 'type': 'server_error', 'param': None, 'code': None}} {'Date': 'Tue, 23 May 2023 13:15:54 GMT', 'Content-Type': 'application/json', 'Content-Length': '366', 'Connection': 'keep-alive', 'access-control-allow-origin': '*', 'openai-processing-ms': '134', 'openai-version': '2020-10-01', 'strict-transport-security': 'max-age=15724800; includeSubDomains', 'x-ratelimit-limit-requests': '3', 'x-ratelimit-limit-tokens': '40000', 'x-ratelimit-remaining-requests': '2', 'x-ratelimit-remaining-tokens': '39972', 'x-ratelimit-reset-requests': '20s', 'x-ratelimit-reset-tokens': '42ms', 'x-request-id': '8fa51537dc29f1e721ee83f9a2f96b05', 'CF-Cache-Status': 'DYNAMIC', 'Server': 'cloudflare', 'CF-RAY': '7cbd91fdd8e424be-ZRH', 'alt-svc': 'h3="":443""; ma=86400, h3-29="":443""; ma=86400'}
-"
 "0","print(response)"
-"1","As an AI language model, I do not have access to real-time weather information. However, Hampshire is not located in an area that is typically affected by hurricanes. The United Kingdom is more likely to experience storms and heavy rainfall, but it is always important to check local weather forecasts for the most up-to-date information.
+"1","As an AI language model, I do not have access to real-time weather information. However, Hampshire is a county in southern England, and hurricanes are extremely rare in this region. It is more likely to experience heavy rain, strong winds, and occasional storms. It is always advisable to check the local weather forecast for the latest updates and warnings.
 "
