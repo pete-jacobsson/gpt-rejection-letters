@@ -3,9 +3,9 @@
     "path": "~/Documents/GitHub/gpt-rejection-letters/rejection_letters.qmd",
     "project_path": "rejection_letters.qmd",
     "type": "quarto_markdown",
-    "hash": "0",
+    "hash": "1766998703",
     "contents": "",
-    "dirty": true,
+    "dirty": false,
     "created": 1684494333316.0,
     "source_on_save": false,
     "relative_order": 1,
@@ -17,11 +17,11 @@
         "scrollLine": "87"
     },
     "folds": "",
-    "lastKnownWriteTime": 1685021320,
+    "lastKnownWriteTime": 1685022332,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1685021646471,
+    "last_content_update": 1685022332577,
     "read_only": false,
     "read_only_alternatives": []
 }

@@ -11,19 +11,20 @@
 "0","prompt = """"""Please compare the CV to the Job Description. Return the list of skills required in the Job description and state whether the CV matches them (as yes or no). Make sure that the match is literal - for example if the job description specifies 'Agile', do not pass 'Scrum@ as matching. Only provide the list once. Wrtie the reply in a friendly, supportive tone, addressing the CV sender as to why they did not receive the interview they applied for and suggest improvements for the future. Sign your reply as 'George, Automated HR assistant'. CV:["""""" + sample_cv + """"""] Job description: ["""""" + sample_job + """"""]"""""""
 "0",""
 "0",""
-"0","cv_match = get_completion(prompt, temperature  = 0.5)"
+"0","cv_match = get_completion(prompt, temperature  = 0.75)"
 "0","print(cv_match)"
 "1","Dear John,
 
-Thank you for your recent application for the Junior Data Analyst position in the logistics sector. We appreciate your interest in the role and the time you took to apply. Unfortunately, we regret to inform you that your application was unsuccessful on this occasion.
+Thank you for your recent application for the Junior Data Analyst for Logistics Sector role. We appreciate your interest in the position and your comprehensive CV, which details your Masters education and extensive experience working as a Data Analyst in the retail sector.
 
-After carefully reviewing your CV against the job description, we found that your skills and experience did not match all the requirements for the position. While you have a strong background in data analysis and statistical modeling, there were a few areas where we felt you did not meet the requirements. Specifically, you did not have experience with logistics operations and supply chain management, which is a key requirement for this position. Additionally, you did not mention any experience with Excel, which is a required skill for this role.
+Unfortunately, we regret to inform you that on this occasion, we will not be moving forward with your application. After comparing your CV with the job description, we found that while your experience and skills are impressive, they do not align fully with the requirements for this specific position.
 
-We encourage you to continue to develop your skills and experience in these areas, as they will be valuable for future roles in the logistics sector. You may also want to consider taking courses or certifications to improve your knowledge of logistics operations and Excel.
+We were looking for a candidate who has experience in logistics operations and supply chain management, which were not highlighted in your CV. Additionally, proficiency in Excel was a requirement for the position, which was not mentioned in your skills section. 
 
-We appreciate your interest in our organization and wish you all the best in your future endeavors.
+However, we appreciate your experience in statistical analysis, data modeling, and data visualization, and your knowledge of project management methodologies such as Scrum and Kanban. These skills are highly valuable, and we encourage you to continue to develop them further.
 
-Sincerely,
+We would like to thank you again for your application and encourage you to continue applying to job opportunities that are a better match for your skills and experience. We wish you the best of luck in your future endeavors.
 
+Best regards,
 George, Automated HR assistant
 "
