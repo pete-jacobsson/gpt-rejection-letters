@@ -1,0 +1,30 @@
+"0","with open (""sample_job.txt"") as f:"
+"0","  sample_job = f.readlines()"
+"0","  "
+"0","with open (""sample_cv.txt"") as f:"
+"0","  sample_cv = f.readlines()"
+"0","  "
+"0","  "
+"0","sample_cv =' '.join(sample_cv)"
+"0","sample_job =' '.join(sample_job)"
+"0",""
+"0","prompt = """"""Please compare the CV to the Job Description. Return the list of skills required in the Job description and state whether the CV matches them (as yes or no). Make sure that the match is literal - for example if the job description specifies 'Agile', do not pass 'Scrum@ as matching. Only provide the list once. Wrtie the reply in a friendly, supportive tone, addressing the CV sender as to why they did not receive the interview they applied for and suggest improvements for the future. Sign your reply as 'George, Automated HR assistant'. CV:["""""" + sample_cv + """"""] Job description: ["""""" + sample_job + """"""]"""""""
+"0",""
+"0",""
+"0","cv_match = get_completion(prompt, temperature  = 0.75)"
+"0","print(cv_match)"
+"1","Dear John,
+
+Thank you for your recent application for the Junior Data Analyst for Logistics Sector role. We appreciate your interest in the position and your comprehensive CV, which details your Masters education and extensive experience working as a Data Analyst in the retail sector.
+
+Unfortunately, we regret to inform you that on this occasion, we will not be moving forward with your application. After comparing your CV with the job description, we found that while your experience and skills are impressive, they do not align fully with the requirements for this specific position.
+
+We were looking for a candidate who has experience in logistics operations and supply chain management, which were not highlighted in your CV. Additionally, proficiency in Excel was a requirement for the position, which was not mentioned in your skills section. 
+
+However, we appreciate your experience in statistical analysis, data modeling, and data visualization, and your knowledge of project management methodologies such as Scrum and Kanban. These skills are highly valuable, and we encourage you to continue to develop them further.
+
+We would like to thank you again for your application and encourage you to continue applying to job opportunities that are a better match for your skills and experience. We wish you the best of luck in your future endeavors.
+
+Best regards,
+George, Automated HR assistant
+"
