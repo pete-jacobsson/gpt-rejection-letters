@@ -1,6 +1,0 @@
-"0","prompt_conn_test = f""""""Are there any hurricanes in Hampshire today?"""""""
-"0",""
-"0","response = get_completion(prompt_conn_test)"
-"0","print(response)"
-"1","As an AI language model, I do not have access to real-time weather information. However, Hampshire is a county in southern England, and hurricanes are extremely rare in this region. It is more likely to experience heavy rain, strong winds, and occasional storms. It is always advisable to check the local weather forecast for the latest updates and warnings.
-"

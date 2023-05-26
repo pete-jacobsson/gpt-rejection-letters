@@ -1,0 +1,583 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  letterpaper,
+  DIV=11,
+  numbers=noendperiod]{scrartcl}
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+% Make \paragraph and \subparagraph free-standing
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{241,243,245}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\KOMAoption{captions}{tableheading}
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[many]{tcolorbox}}
+\makeatother
+\makeatletter
+\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
+\makeatother
+\makeatletter
+\makeatother
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={GPT rejection letters},
+  pdfauthor={Pete Jacobsson},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{GPT rejection letters}
+\author{Pete Jacobsson}
+\date{}
+
+\begin{document}
+\maketitle
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, borderline west={3pt}{0pt}{shadecolor}, breakable, interior hidden, frame hidden, boxrule=0pt, enhanced]}{\end{tcolorbox}}\fi
+
+This project is about using GPT to write meaningful job rejection
+letters. The idea for the project came from an automated response from
+an application I did some time ago. The message was nice, and it was
+nice to receive something - but the thing that struck me was that they
+apologized for the reply being impersonal. So I thought - \textbf{Hey,
+it should be possible to not only personalize, but also build feedback
+into the reply}. With a connection to GPT the ATS might start working
+for both sides.
+
+\hypertarget{tldr}{%
+\subsection{TLDR}\label{tldr}}
+
+We have an (AI-generated) job description, an (AI-generated) CV. We run
+a function and we receive a rejection letter that specifies how the
+candidate might need to work on to improve their chances next time
+round. Integrated into a data workflow this would improve the engagement
+with prospective candidates (thus building a better talent pool for
+future hires), hopefully lead to improvement in candidate quality over
+time, and would add only a very limited cost to the operation of a
+recruiting system (limited to some processing power and covering GPT
+costs).
+
+\hypertarget{sample-job-description}{%
+\subsubsection{Sample job description}\label{sample-job-description}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{with} \BuiltInTok{open}\NormalTok{ (}\StringTok{"sample\_job.txt"}\NormalTok{) }\ImportTok{as}\NormalTok{ f:}
+\NormalTok{  sample\_job }\OperatorTok{=}\NormalTok{ f.readlines()}
+
+\NormalTok{sample\_job }\OperatorTok{=}\StringTok{\textquotesingle{} \textquotesingle{}}\NormalTok{.join(sample\_job)}
+
+\BuiltInTok{print}\NormalTok{(sample\_job)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Job Description: Junior Data Analyst for Logistics Sector
+ 
+ We are seeking a Junior Data Analyst to join our logistics team. The ideal candidate will be responsible for analyzing data and providing insights to improve our logistics operations. The candidate should have a strong analytical mindset and be able to work with large datasets. The candidate should also be able to communicate effectively with stakeholders and work collaboratively with other team members.
+ 
+ Responsibilities:
+ - Analyze data to identify trends and patterns in logistics operations
+ - Develop reports and dashboards to communicate insights to stakeholders
+ - Collaborate with other team members to identify areas for improvement in logistics operations
+ - Work with IT team to ensure data accuracy and integrity
+ - Develop and maintain data models to support logistics operations
+ - Identify opportunities for automation and process improvement
+ - Participate in project planning and execution
+ - Communicate effectively with stakeholders to understand their needs and requirements
+ - Provide training and support to other team members on data analysis tools and techniques
+ - Stay up-to-date with industry trends and best practices in data analysis
+ 
+ Requirements:
+ - Bachelor's degree in Computer Science, Mathematics, Statistics, or related field
+ - Strong analytical skills and ability to work with large datasets
+ - Proficiency in SQL and Excel
+ - Experience with data visualization tools such as Tableau or Power BI
+ - Familiarity with programming languages such as Python or R
+ - Knowledge of logistics operations and supply chain management
+ - Experience with project management methodologies such as Agile or Waterfall
+ - Excellent communication and collaboration skills
+ - Ability to work independently and as part of a team
+ - Strong attention to detail and ability to prioritize tasks
+ 
+ If you are passionate about data analysis and logistics operations, we encourage you to apply for this exciting opportunity. We offer a competitive salary and benefits package, as well as opportunities for professional growth and development.
+\end{verbatim}
+
+\hypertarget{sample-cv}{%
+\subsubsection{Sample CV}\label{sample-cv}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{with} \BuiltInTok{open}\NormalTok{ (}\StringTok{"sample\_cv.txt"}\NormalTok{) }\ImportTok{as}\NormalTok{ f:}
+\NormalTok{  sample\_cv }\OperatorTok{=}\NormalTok{ f.readlines()}
+
+\NormalTok{sample\_cv }\OperatorTok{=}\StringTok{\textquotesingle{} \textquotesingle{}}\NormalTok{.join(sample\_cv)}
+
+\BuiltInTok{print}\NormalTok{(sample\_cv)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+JOHN DOE
+ 123 Main Street | Anytown, USA 12345 | (123) 456-7890 | john.doe@email.com
+ 
+ SUMMARY
+ Masters-educated Data Analyst with 3 years of experience in the retail sector. Proficient in statistical analysis, data modeling, and data visualization. Certified Scrum Master with experience leading cross-functional teams. Seeking a Logistics Data Analyst position.
+ 
+ EDUCATION
+ Master of Arts in Economics, Ivy League University, Anytown, USA (2017)
+ Bachelor of Science in Economics, State University, Anytown, USA (2015)
+ 
+ EXPERIENCE
+ Data Analyst, Retail Company, Anytown, USA (2017-2020)
+ - Conducted statistical analysis on sales data to identify trends and inform business decisions
+ - Developed and maintained data models to forecast sales and inventory levels
+ - Created interactive dashboards to visualize sales data and track performance metrics
+ - Collaborated with cross-functional teams to identify opportunities for process improvement
+ - Led daily stand-up meetings as Scrum Master to ensure project progress and team alignment
+ 
+ Data Analyst Intern, Retail Company, Anytown, USA (2016-2017)
+ - Assisted senior analysts with data cleaning and preparation
+ - Conducted ad-hoc analysis to support business decisions
+ - Developed basic data visualizations for internal reporting
+ 
+ SKILLS
+ - Statistical analysis: regression analysis, time series analysis, hypothesis testing
+ - Data modeling: linear regression, logistic regression, decision trees
+ - Data visualization: Tableau, Power BI, D3.js
+ - Project management: Scrum, Kanban
+ - Programming languages: Python, R, SQL
+ 
+ CERTIFICATIONS
+ Certified Scrum Master, Scrum Alliance
+ 
+ REFERENCES
+ Available upon request.
+\end{verbatim}
+
+\hypertarget{automatically-generated-rejection-letter}{%
+\subsubsection{Automatically generated rejection
+letter}\label{automatically-generated-rejection-letter}}
+
+\texttt{\{pyton,\ echo\ =\ FALSE\}\ print\_rejection\_letter(input\_job\ =\ sample\_job,\ input\_cv\ =\ sample\_cv)}
+
+\hypertarget{how-does-it-work-set-up.}{%
+\subsection{How does it work? Set up.}\label{how-does-it-work-set-up.}}
+
+I set up the GPT connection via the API using the get\_completion
+function, as discussed by Isa Fulford and Andrew NG in their
+deeplearning.ai course.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{import}\NormalTok{ openai}
+\ImportTok{import}\NormalTok{ os}
+\ImportTok{import}\NormalTok{ time}
+
+\CommentTok{\#\#COMMENT UP THIS CODE!!!}
+\ControlFlowTok{with} \BuiltInTok{open}\NormalTok{(}\StringTok{\textquotesingle{}/home/pete/Documents/gpt\_key.txt\textquotesingle{}}\NormalTok{) }\ImportTok{as}\NormalTok{ t:}
+\NormalTok{  openai.api\_key }\OperatorTok{=}\NormalTok{ t.readlines()[}\DecValTok{0}\NormalTok{].strip(}\StringTok{"}\CharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+
+
+\KeywordTok{def}\NormalTok{ get\_completion(prompt, model}\OperatorTok{=}\StringTok{"gpt{-}3.5{-}turbo"}\NormalTok{, temperature }\OperatorTok{=} \DecValTok{0}\NormalTok{):}
+\NormalTok{    messages }\OperatorTok{=}\NormalTok{ [\{}\StringTok{"role"}\NormalTok{: }\StringTok{"user"}\NormalTok{, }\StringTok{"content"}\NormalTok{: prompt\}]}
+\NormalTok{    response }\OperatorTok{=}\NormalTok{ openai.ChatCompletion.create(}
+\NormalTok{        model}\OperatorTok{=}\NormalTok{model,}
+\NormalTok{        messages}\OperatorTok{=}\NormalTok{messages,}
+\NormalTok{        temperature}\OperatorTok{=}\NormalTok{temperature, }\CommentTok{\# this is the degree of randomness of the model\textquotesingle{}s output}
+\NormalTok{    )}
+    \ControlFlowTok{return}\NormalTok{ response.choices[}\DecValTok{0}\NormalTok{].message[}\StringTok{"content"}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+Lets test if the function works
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{time.sleep(}\DecValTok{20}\NormalTok{) }\CommentTok{\# A forced break to ensure this does not cross the 3 API calls per minute limit}
+\NormalTok{prompt\_conn\_test }\OperatorTok{=} \SpecialStringTok{f"""Are there any hurricanes in Hampshire today?"""}
+
+\NormalTok{response }\OperatorTok{=}\NormalTok{ get\_completion(prompt\_conn\_test)}
+\BuiltInTok{print}\NormalTok{(response)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+As an AI language model, I do not have access to real-time weather information. However, Hampshire is not located in an area that is typically affected by hurricanes. The United Kingdom is more likely to experience storms and heavy rainfall, but it is always important to check local weather forecasts for the most up-to-date information.
+\end{verbatim}
+
+So we have a connection. Now lets get a fictionalized job description
+and a CV.
+
+\hypertarget{how-does-it-work-job-description}{%
+\subsection{How does it work? Job
+description}\label{how-does-it-work-job-description}}
+
+We can generate the job description using GPT:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{prompt\_job\_descript }\OperatorTok{=} \SpecialStringTok{f"""Could you please write a job description for a junior data analyst for the logistics sector? Please make sure to include a list of ten requirements. Please make sure that the description is less than 500 words long total. Please make sure that the ten requirements refer to specific technical, project management or language skills"""}
+\NormalTok{time.sleep(}\DecValTok{20}\NormalTok{)}
+\NormalTok{job\_description }\OperatorTok{=}\NormalTok{ get\_completion(prompt\_job\_descript)}
+\BuiltInTok{print}\NormalTok{(job\_description)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Job Description: Junior Data Analyst for Logistics Sector
+
+We are seeking a Junior Data Analyst to join our logistics team. The ideal candidate will be responsible for analyzing data and providing insights to improve our logistics operations. The candidate should have a strong analytical mindset and be able to work with large datasets. The candidate should also be able to communicate effectively with stakeholders and work collaboratively with other team members.
+
+Responsibilities:
+- Analyze data to identify trends and patterns in logistics operations
+- Develop reports and dashboards to communicate insights to stakeholders
+- Collaborate with other team members to identify areas for improvement in logistics operations
+- Work with IT team to ensure data accuracy and integrity
+- Develop and maintain data models to support logistics operations
+- Identify opportunities for automation and process improvement
+- Participate in project planning and execution
+- Communicate effectively with stakeholders to understand their needs and requirements
+- Provide training and support to other team members on data analysis tools and techniques
+- Stay up-to-date with industry trends and best practices in data analysis
+
+Requirements:
+- Bachelor's degree in Computer Science, Mathematics, Statistics, or related field
+- Strong analytical skills and ability to work with large datasets
+- Proficiency in SQL and Excel
+- Experience with data visualization tools such as Tableau or Power BI
+- Familiarity with programming languages such as Python or R
+- Knowledge of logistics operations and supply chain management
+- Experience with project management methodologies such as Agile or Waterfall
+- Excellent communication and collaboration skills
+- Ability to work independently and as part of a team
+- Strong attention to detail and ability to prioritize tasks
+
+If you are passionate about data analysis and logistics operations, we encourage you to apply for this exciting opportunity. We offer a competitive salary and benefits package, as well as opportunities for professional growth and development.
+\end{verbatim}
+
+Hence, we built ourselves a fictionalized job description. A little not
+on the prompt. I wanted to have a specific enough description to
+generate discrepencies from a random GPT-generated CV (which we will do
+in the next section). I also wanted the description to not be too long
+(mostly for my own sake - I don't feel like reading a 2,000 word
+fictitious job description). Last, on the first iteration, I didn't like
+the requirements section enough - they were a little ``wooly'' - not
+something that a traditional ATS could easily detect by scanning for
+keywords. Hence, I added the section asking GPT to return a specific
+skill list for the requirements.
+
+\hypertarget{how-does-it-work-generate-a-sample-cv}{%
+\subsection{How does it work? Generate a sample
+CV}\label{how-does-it-work-generate-a-sample-cv}}
+
+Again, I will rely on GPT for this. The original job description is one
+for a data analyst in a logistics sector. John Doe, our fictional
+rejectee will hold a Masters in economics and will have had three years
+experience as a data analyst in the retail sector. What Herbert will
+lack on his CV is evidence of knowledge of logistics, nothing on Excel,
+no programming languages. He will specify that he is a certified Scrum
+Master, but not mention project management explicitly. I might then
+throw in some additional curve balls into the prompt to get some more
+controlled clashes with the job description.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{prompt\_cv }\OperatorTok{=} \SpecialStringTok{f"""Can you please generate a CV for one John Doe. John holds a Masters in economics from an Ivy League University. Since graduation he worked three years as a data anlyst within the retail sector. The CV is not to include any evidence of knowledge of logistics, does not include the word \textquotesingle{}Excel\textquotesingle{}, and has no mention of programming languages. The CV indicates that John is a Scrum master, but does not include terms \textquotesingle{}agile\textquotesingle{} or \textquotesingle{}project management\textquotesingle{}. Please fill in remaining details as you see fit. Please keep the CV to two pages A2. John is applying for a logistics data analyst post"""}
+\NormalTok{time.sleep(}\DecValTok{20}\NormalTok{)}
+\NormalTok{cv\_text }\OperatorTok{=}\NormalTok{ get\_completion(prompt\_cv, temperature }\OperatorTok{=} \FloatTok{0.5}\NormalTok{) }\CommentTok{\#Added some variability to the responses.}
+
+\BuiltInTok{print}\NormalTok{(cv\_text)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+John Doe
+
+Contact Information:
+Email: johndoe@email.com
+Phone: 555-555-5555
+
+Objective:
+To obtain a position as a logistics data analyst where I can apply my analytical skills and experience in data analysis to improve the efficiency of logistics operations.
+
+Education:
+Master of Arts in Economics, Ivy League University
+Bachelor of Arts in Economics, State University
+
+Professional Experience:
+Data Analyst, Retail Company
+- Conducted data analysis to identify trends and patterns in customer behavior, resulting in a 10% increase in sales
+- Developed and maintained databases to store and analyze data, resulting in a 20% reduction in data processing time
+- Created reports and visualizations to communicate data insights to stakeholders, resulting in improved decision-making
+
+Scrum Master, Retail Company
+- Facilitated daily stand-up meetings, sprint planning, and sprint retrospective meetings
+- Coordinated with cross-functional teams to ensure timely delivery of projects
+- Ensured adherence to Scrum methodology and best practices
+
+Skills:
+- Proficient in SQL and data visualization tools such as Tableau and Power BI
+- Experience with data modeling and database management
+- Strong analytical and problem-solving skills
+- Excellent communication and presentation skills
+
+Certifications:
+- Certified Scrum Master (CSM)
+
+References:
+Available upon request.
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#\#Lets save the job description and the CV. This will allow keeping the number of API calls down, and makes the protype reproducible.}
+\CommentTok{\# with open(\textquotesingle{}sample\_job.txt\textquotesingle{}, \textquotesingle{}w\textquotesingle{}) as sj:}
+\CommentTok{\#   sj.write(job\_description)}
+\CommentTok{\# }
+\CommentTok{\# with open(\textquotesingle{}sample\_cv.txt\textquotesingle{}, \textquotesingle{}w\textquotesingle{}) as cv:}
+\CommentTok{\#   cv.write(cv\_text)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{how-does-it-work-use-gpt-to-screen-the-sample-cv}{%
+\subsection{How does it work? Use GPT to screen the sample
+CV}\label{how-does-it-work-use-gpt-to-screen-the-sample-cv}}
+
+At this stage we have a CV and a job description. In the target workflow
+we would run the CV through an ATS, and use that to get a list of
+mis-matches. However, as I don't have access to a real ATS, I will once
+again use a GPT prompt instead.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{with} \BuiltInTok{open}\NormalTok{ (}\StringTok{"sample\_job.txt"}\NormalTok{) }\ImportTok{as}\NormalTok{ f:}
+\NormalTok{  sample\_job }\OperatorTok{=}\NormalTok{ f.readlines()}
+
+\ControlFlowTok{with} \BuiltInTok{open}\NormalTok{ (}\StringTok{"sample\_cv.txt"}\NormalTok{) }\ImportTok{as}\NormalTok{ f:}
+\NormalTok{  sample\_cv }\OperatorTok{=}\NormalTok{ f.readlines()}
+
+
+\NormalTok{sample\_cv }\OperatorTok{=}\StringTok{\textquotesingle{} \textquotesingle{}}\NormalTok{.join(sample\_cv)}
+\NormalTok{sample\_job }\OperatorTok{=}\StringTok{\textquotesingle{} \textquotesingle{}}\NormalTok{.join(sample\_job)}
+
+\NormalTok{prompt }\OperatorTok{=} \StringTok{"""Please compare the CV to the Job Description. Return the list of skills required in the Job description and state whether the CV matches them (as yes or no). Make sure that the match is literal {-} for example if the job description specifies \textquotesingle{}Agile\textquotesingle{}, do not pass \textquotesingle{}Scrum@ as matching. Only provide the list once. Wrtie the reply in a friendly, supportive tone, addressing the CV sender as to why they did not receive the interview they applied for and suggest improvements for the future. Sign your reply as \textquotesingle{}George, Automated HR assistant\textquotesingle{}. CV:["""} \OperatorTok{+}\NormalTok{ sample\_cv }\OperatorTok{+} \StringTok{"""] Job description: ["""} \OperatorTok{+}\NormalTok{ sample\_job }\OperatorTok{+} \StringTok{"""]"""}
+
+\NormalTok{time.sleep(}\DecValTok{20}\NormalTok{)}
+\NormalTok{cv\_match }\OperatorTok{=}\NormalTok{ get\_completion(prompt, temperature  }\OperatorTok{=} \FloatTok{0.75}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(cv\_match)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Dear John,
+
+Thank you for applying for the Junior Data Analyst position in the Logistics Sector. We appreciate your interest in our company. While your CV is impressive, we regret to inform you that we are unable to offer you an interview at this time.
+
+The requirements for the position include a Bachelor's degree in Computer Science, Mathematics, Statistics, or related field, with proficiency in SQL and Excel. The position also requires experience with data visualization tools such as Tableau or Power BI, programming languages such as Python or R, and knowledge of logistics operations and supply chain management. Experience with project management methodologies such as Agile or Waterfall is also desired.
+
+While your Master's degree in Economics and experience as a Data Analyst in the retail sector demonstrate your strong analytical skills, your CV does not provide evidence of proficiency in SQL or Excel. In addition, the job description requires experience with data visualization tools such as Tableau or Power BI, which are not listed on your CV. Although you have programming experience in Python, R, and SQL, knowledge of logistics operations and supply chain management is not evident in your experience.
+
+We encourage you to continue to develop your skills and experience in the areas mentioned above to increase your chances of success in future applications. We wish you the best of luck in your job search.
+
+Kind Regards,
+
+George, Automated HR assistant.
+\end{verbatim}
+
+The final step is to wrap the above bit of code into a function.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ print\_rejection\_letter(input\_job, input\_cv, temperature }\OperatorTok{=} \FloatTok{0.5}\NormalTok{):}
+\NormalTok{    prompt }\OperatorTok{=} \StringTok{"""Please compare the CV to the Job Description. Return the list of skills required in the Job description and state whether the     CV matches them (as yes or no). Make sure that the match is literal {-} for example if the job description specifies \textquotesingle{}Agile\textquotesingle{}, do not pass       \textquotesingle{}Scrum@ as matching. Only provide the list once. Wrtie the reply in a friendly, supportive tone, addressing the CV sender as to why they       did not receive the interview they applied for and suggest improvements for the future. Sign your reply as \textquotesingle{}George, Automated HR              assistant\textquotesingle{}. CV:["""} \OperatorTok{+}\NormalTok{ input\_job }\OperatorTok{+} \StringTok{"""] Job description: ["""} \OperatorTok{+}\NormalTok{ input\_cv }\OperatorTok{+} \StringTok{"""]"""}
+\NormalTok{    cv\_match }\OperatorTok{=}\NormalTok{ get\_completion(prompt, temperature  }\OperatorTok{=}\NormalTok{ temperature)}
+    \ControlFlowTok{return}\NormalTok{ cv\_match}
+\end{Highlighting}
+\end{Shaded}
+
+Test the function:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{time.sleep(}\DecValTok{20}\NormalTok{)}
+\NormalTok{rejection }\OperatorTok{=}\NormalTok{ print\_rejection\_letter(input\_job }\OperatorTok{=}\NormalTok{ sample\_job, input\_cv }\OperatorTok{=}\NormalTok{ sample\_cv)}
+\BuiltInTok{print}\NormalTok{(rejection)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Dear John,
+
+Thank you for your interest in the Junior Data Analyst position for the logistics sector. We appreciate the time and effort you put into submitting your CV. Unfortunately, we have decided not to move forward with your application at this time.
+
+After comparing your CV to the job description, we found that you possess many of the required skills, such as statistical analysis, data modeling, and data visualization. However, we noticed that you did not mention any experience with logistics operations or supply chain management, which is a key requirement for this position. Additionally, while you have experience with Scrum, you did not mention experience with Agile or Waterfall project management methodologies.
+
+We encourage you to continue developing your skills in these areas and to consider gaining experience in logistics operations and supply chain management. This will increase your chances of being considered for similar positions in the future.
+
+Thank you again for your interest in our company, and we wish you the best of luck in your job search.
+
+Best regards,
+
+George, Automated HR assistant
+\end{verbatim}
+
+
+
+\end{document}
