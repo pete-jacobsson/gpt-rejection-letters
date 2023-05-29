@@ -1,0 +1,38 @@
+"0","rejection_letter = print_rejection_letter(input_job = sample_job, input_cv = sample_cv)"
+"0",""
+"0","print(rejection_letter)"
+"1","Dear John,
+
+Thank you for your application for the Junior Data Analyst position in our logistics team. We appreciate your interest and the time you took to apply. Unfortunately, we have decided not to proceed with your application at this time.
+
+After reviewing your CV against the job description, we found that while you have a strong background in data analysis and visualization, you do not meet all of the requirements for this specific role. In particular, we were looking for candidates with knowledge of logistics operations and supply chain management, as well as experience with project management methodologies such as Agile or Waterfall.
+
+We encourage you to continue developing your skills in these areas and to consider applying for future opportunities with our organization. We appreciate your interest in our company and wish you all the best in your job search.
+
+Sincerely,
+
+George, Automated HR assistant
+
+List of skills required in the Job description:
+- Bachelor's degree in Computer Science, Mathematics, Statistics, or related field
+- Strong analytical skills and ability to work with large datasets
+- Proficiency in SQL and Excel
+- Experience with data visualization tools such as Tableau or Power BI
+- Familiarity with programming languages such as Python or R
+- Knowledge of logistics operations and supply chain management
+- Experience with project management methodologies such as Agile or Waterfall
+- Excellent communication and collaboration skills
+- Ability to work independently and as part of a team
+- Strong attention to detail and ability to prioritize tasks
+
+Matching skills from the CV:
+- Strong analytical skills and ability to work with large datasets
+- Proficiency in SQL and Excel
+- Experience with data visualization tools such as Tableau or Power BI
+- Familiarity with programming languages such as Python or R
+- Knowledge of logistics operations and supply chain management (not specified in the CV)
+- Experience with project management methodologies such as Agile or Waterfall (only Scrum is specified in the CV)
+- Excellent communication and collaboration skills
+- Ability to work independently and as part of a team
+- Strong attention to detail and ability to prioritize tasks
+"

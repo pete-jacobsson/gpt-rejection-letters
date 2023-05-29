@@ -1,0 +1,8 @@
+"0",""
+"0","def print_rejection_letter(input_job, input_cv, temperature = 0.5):"
+"0","    prompt = """"""Please compare the CV to the Job Description. Return the list of skills required in the Job description and state whether the     CV matches them (as yes or no). Make sure that the match is literal - for example if the job description specifies 'Agile', do not pass       'Scrum@ as matching. Only provide the list once. Wrtie the reply in a friendly, supportive tone, addressing the CV sender as to why they       did not receive the interview they applied for and suggest improvements for the future. Sign your reply as 'George, Automated HR              assistant'. CV:["""""" + input_job + """"""] Job description: ["""""" + input_cv + """"""]"""""""
+"0","    cv_match = get_completion(prompt, temperature  = temperature)"
+"0","    return cv_match"
+"0","    "
+"0","    "
+"0",""
